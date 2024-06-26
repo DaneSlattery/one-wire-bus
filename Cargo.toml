@@ -1,6 +1,6 @@
 [package]
 name = "one-wire-bus"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Nathan Fox <fuchsnj@gmail.com>"]
 license = "MIT/Apache-2.0"
 repository = "https://github.com/fuchsnj/one-wire-bus"
@@ -12,5 +12,14 @@ description = """
 A Rust implementation of the 1-Wire protocol for embedded-hal
 """
 
+[features]
+std = []
+async = ["embedded-hal-async", "embassy-futures", "embassy-time"]
+default = ["async", "std"]
+
+
 [dependencies]
-embedded-hal = {version="0.2.3", features=["unproven"]}
+embedded-hal = { version = "1.0.0" }
+embedded-hal-async = { version = "*", optional = true }
+embassy-futures = { version = "*", optional = true }
+embassy-time = { version = "*", optional = true }
