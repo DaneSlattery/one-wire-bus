@@ -15,7 +15,6 @@ A Rust implementation of the 1-Wire protocol for embedded-hal
 [features]
 std = []
 async = ["embedded-hal-async", "embassy-futures", "embassy-time"]
-default = ["async", "std"]
 
 
 [dependencies]
