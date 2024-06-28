@@ -1,5 +1,4 @@
 #![cfg_attr(not(feature = "std"), no_std)]
-#![feature(async_iterator)]
 
 use embedded_hal::delay::DelayNs;
 use embedded_hal::digital::{InputPin, OutputPin};
