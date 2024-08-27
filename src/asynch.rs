@@ -1,5 +1,4 @@
 use core::{
-    async_iter::AsyncIterator,
     future::{Future, IntoFuture},
     pin::{pin, Pin},
     task::Poll,
